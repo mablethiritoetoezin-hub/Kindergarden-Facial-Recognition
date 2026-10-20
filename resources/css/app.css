@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Import Bootstrap (already included via Breeze) */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+     /* Admin Panel Custom Styling */
+     /* General Styles */
+     body {
+         background-color: #f8f9fa;
+         font-family: 'Nunito', sans-serif;
+     }
+
+     /* Dashboard Cards */
+     .card {
+         border: none;
+         border-radius: 10px;
+         transition: transform 0.2s, box-shadow 0.2s;
+         margin-bottom: 1.5rem;
+     }
+
+     .card:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+     }
+
+     .card-header {
+         border-radius: 10px 10px 0 0 !important;
+         font-weight: 600;
+         padding: 1rem 1.5rem;
+     }
+
+     .card-header.bg-dark {
+         background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%) !important;
+     }
+
+     .card-body {
+         padding: 1.5rem;
+     }
+
+     /* Tables */
+     .table {
+         margin-bottom: 0;
+     }
+
+     .table thead th {
+         border-top: none;
+         border-bottom: 2px solid #dee2e6;
+         font-weight: 600;
+         text-transform: uppercase;
+         font-size: 0.8rem;
+         letter-spacing: 0.5px;
+         padding: 1rem;
+     }
+
+     .table tbody td {
+         vertical-align: middle;
+         padding: 1rem;
+     }
+
+     .table-striped tbody tr:nth-of-type(odd) {
+         background-color: rgba(0, 0, 0, 0.02);
+     }
+
+     /* Buttons */
+     .btn {
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         transition: all 0.2s;
+         border-radius: 5px;
+     }
+
+     .btn-sm {
+         padding: 0.4rem 0.75rem;
+     }
+
+     .btn-primary {
+         background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+         border: none;
+     }
+
+     .btn-primary:hover {
+         background: linear-gradient(135deg, #2980b9 0%, #2573a7 100%);
+         transform: translateY(-2px);
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     }
+
+     .btn-danger {
+         background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+         border: none;
+     }
+
+     .btn-danger:hover {
+         background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+         transform: translateY(-2px);
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     }
+
+     /* Welcome Card */
+     .card h4 {
+         font-weight: 700;
+         color: #2c3e50;
+         margin-bottom: 0.5rem;
+     }
+
+     /* Images */
+     .table img {
+         border-radius: 5px;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+         transition: transform 0.2s;
+     }
+
+     .table img:hover {
+         transform: scale(1.5);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+         z-index: 10;
+         position: relative;
+     }
+
+     /* No data messages */
+     .text-muted {
+         font-style: italic;
+         color: #95a5a6 !important;
+     }
+
+     /* Responsive adjustments */
+     @media (max-width: 768px) {
+         .card-body {
+             padding: 1rem;
+         }
+         
+         .table thead th {
+             font-size: 0.7rem;
+             padding: 0.75rem;
+         }
+         
+         .table tbody td {
+             padding: 0.75rem;
+         }
+     }
+
+     /* Admin badge styles */
+     .role-badge {
+         padding: 0.3rem 0.6rem;
+         border-radius: 50px;
+         font-size: 0.75rem;
+         font-weight: 600;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+     }
+
+     .role-admin {
+         background-color: #2c3e50;
+         color: white;
+     }
+
+     .role-teacher {
+         background-color: #27ae60;
+         color: white;
+     }
+
+     .role-parent {
+         background-color: #3498db;
+         color: white;
+     }
+
+     /* Ensure footer stays at bottom */
+     .min-vh-100 {
+         min-height: 100vh;
+     }
+
+     .flex-grow-1 {
+         flex-grow: 1;
+     }
